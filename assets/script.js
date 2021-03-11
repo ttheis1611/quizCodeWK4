@@ -1,10 +1,10 @@
 var startBtn = document.getElementById("enterBtn");
+var nextButton = document.getElementById('submit-question')
 var displayTime = document.getElementById("display-time");
-var questionContainerElement = document.getElementById('quiz-container')
-var answersList = document.getElementById('answer-list')
-var answerFeedback = document.getElementById('feedback')
-var initTime;
-var timeComplete;
+var questionContainerElement = document.getElementById('quiz-container');
+let shuffledQuestions, currentQuestionIndex;
+var questArrEl = document.getElementById('question');
+var answerButtonsEl = document.getElementById('answer-btns');
 // var questionSection = document.querySelector('question-section');
 
 // Start Quiz and HIDE text
@@ -14,9 +14,11 @@ var startQuiz = function(event) {
     document.getElementById("p2").style.display = "none";
     document.getElementById("enterBtn").style.display = "none";
     questionContainerElement.classList.remove('hide');
+    shuffledQuestions = questArr.sort(() => Math.random() - .5);
+    currentQuestionIndex = 0;
     // Start questions
-    startClock();
-    // questionPage();
+    //startClock();
+    setNextQuestion();
 };
 
 // Questions array sets
@@ -24,21 +26,49 @@ var questArr = [
     //q: question, a: answers, i: correct answer
     {
         q: 'Commonly used data types DO NOT Include:',
-        a: ['strings', 'booleans', 'alerts', 'numbers'],
-        i: 2
-    }, {
-        q: 'String values must be enclosed within ______ when being assigned to variables.',
-        a: ['commas', 'curly brackets', 'quotes', 'parentheses'],
-        i: 2
+        a: [
+            { t: 'strings', correct: false },
+            { t: 'booleans', correct: false },
+            { t: 'alerts', correct: true },
+            { t: 'numbers', correct: false }
+        ]
     }
+    // }, {
+    //     q: 'String values must be enclosed within ______ when being assigned to variables.',
+    //     a: ['commas', 'curly brackets', 'quotes', 'parentheses'],
+    //     i: 2
+    // }
 ];
 
 function setNextQuestion() {
-
+    resetState()
+    showQuestion(shuffledQuestions[currentQuestionIndex]);
 
 }
 
-function selectAnswer() {
+function showQuestion(questArr) {
+    questArrEl.innerText = questArr.q;
+    questArr.a.forEach(a => {
+        var button = document.createElement('button');
+        button.innerHTML = a.t;
+        button.classList.add('btn');
+        if(a.correct) {
+            button.dataset.correct = a.correct
+        }
+        button.addEventListener('click', selectAnswer);
+        answerButtonsEl.appendChild(button);
+    })
+
+}
+
+function resetState() {
+    nextButton.classList.add('hide');
+    while (answerButtonsEl.firstChild) {
+        answerButtonsEl.removeChild(answerButtonsEl.firstChild);
+    } 
+}
+
+function selectAnswer(e) {
 
 
 }
