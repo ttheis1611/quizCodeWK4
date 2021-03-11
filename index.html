@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style.css"></link>
+    <link rel="stylesheet" href="./assets/style.css">
+    </link>
     <title>CoDe QuIz</title>
 </head>
+
 <body>
     <header>
         <span id="timer"> Clock Time:<span id="display-time"> 00:00</span></span>
         <a id="link-highscore" href="#" style="padding-right: 80px;">Highscores</a>
     </header>
-    
+
     <section class="intro-page">
         <h1>Coding Quiz Challenge</h1>
         <p id="p1">Wanna TEST your smarts on coding related questions with a timed quiz?</p>
@@ -20,12 +23,21 @@
         <button id="enterBtn">Start Quiz</button>
     </section>
 
-    <section id="question-pages" class="startHide pageHide">
-        
-        <h2 id="question-display"></h2>
-	
-        <div id="answer-list"></div>
+    <section class="container">
+        <div id="quiz-container" class="hide">
+            <div id="question">Question</div>
+            <div id="answer-buttons" class="btn-grid">
+                <button class="btn">Answer1</button>
+                <button class="btn">Answer2</button>
+                <button class="btn">Answer3</button>
+                <button class="btn">Answer4</button>
+            </div>
 
+            <div id="controls">
+                <button id="submit-question" class="nxt-btn btn hide">Submit</button>
+
+            </div>
+        </div>
     </section>
 
     <!-- <hr> -->
@@ -33,4 +45,5 @@
 
     <script src="./assets/script.js"></script>
 </body>
+
 </html>
