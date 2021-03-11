@@ -2,6 +2,7 @@
 }
 
 body {
+
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -41,7 +42,6 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 600px;
     max-width: 80%;
     box-sizing: border-box;
     background-color: white;
@@ -76,7 +76,7 @@ a {
     align-items: center;
 }
 
- .hide {
+   .hide {
     display: none;
 
- }
+ }  

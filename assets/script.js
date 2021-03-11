@@ -1,6 +1,6 @@
 var startBtn = document.getElementById("enterBtn");
 var displayTime = document.getElementById("display-time");
-var questionDisplay = document.getElementById('question-display')
+var questionContainerElement = document.getElementById('quiz-container')
 var answersList = document.getElementById('answer-list')
 var answerFeedback = document.getElementById('feedback')
 var initTime;
@@ -13,6 +13,7 @@ var startQuiz = function(event) {
     document.getElementById("p1").style.display = "none";
     document.getElementById("p2").style.display = "none";
     document.getElementById("enterBtn").style.display = "none";
+    questionContainerElement.classList.remove('hide');
     // Start questions
     startClock();
     // questionPage();
@@ -31,6 +32,16 @@ var questArr = [
         i: 2
     }
 ];
+
+function setNextQuestion() {
+
+
+}
+
+function selectAnswer() {
+
+
+}
 
 //  var questionPage = function () {
 //     var score = 0
