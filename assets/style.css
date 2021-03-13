@@ -1,82 +1,15 @@
-*, *::before, *::after {
-}
-
+/* CSS for initial page */
 body {
-
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-  header {
-    display: inline-flex;
-    justify-content: space-between;
-    padding:2% 2% 2% 2%;
-    width: 100%;
-  } 
-
-a {
-    display: inline-block;
-    padding: right;
-}
-  
-.intro-page {
-    text-align: center;
-}
-
- h1 {
-     font-size: 2.0rem;
- }
-
-#enterBtn {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: blue;
-    color:whitesmoke;
-    border-radius: 4px;
-}
-
-#enterBtn:hover {
-    border-color: yellow;
- }
-
-
-.container {
+    min-height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 80%;
-    box-sizing: border-box;
-    background-color: white;
-    border-radius: 5px;
-    padding: 10px;
-    /* box-shadow: 0 0 5px 2px; */
+    flex-direction: column;
 }
 
-.btn-grid {
-    display: grid;
-    gap: 10px;
-    margin: 20px 0;
+body > * {
+    flex: 0 0 auto;
+    width: 100%;
 }
 
-
-.btn {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: blue;
-    border: 1px solid black;
-    border-radius: 4px;
-    color: white;
- }
-
- .btn:hover {
-    border-color: yellow;
- }
-
-.nxt-btn {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.0rem;
-    padding: 5px 10x;
-    align-items: center;
+main {
+    flex: 1 0 auto;
 }
-
-   .hide {
-    display: none;
-
- }  

@@ -1,0 +1,150 @@
+/* CSS for initial page */
+button {
+    background-color: #1f4a6d;
+    color: white;
+    padding: 0.5rem 0.75rem;
+    box-shadow: none;
+    border-radius: 0;
+    border: 0;
+  }
+  
+/* Font color*/
+  a {
+    color: black;
+  }
+  
+/* Header frame*/
+  header {
+    display: inline-flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+  }
+  
+/* Begin frame the main section for display*/
+  main {
+    margin: auto;
+    max-width: 625px;
+    padding: 0.5rem;
+  }
+  
+
+  main section h1 {
+    font-size: 2rem;
+    margin: 1rem 0;
+  }
+  
+
+  main section h2 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+  }
+  
+
+  main section p {
+    font-size: 1.25rem;
+    margin: 1rem 0;
+  }
+  
+/* End frame the main section for display*/
+  main section hr {
+    margin: 0.5rem 0;
+  }
+  
+/* Start quiz dialog*/
+  main #start-quiz h1, main #start-quiz p {
+    text-align: center;
+  }
+  
+/* Start quiz button*/
+  main #start-quiz #start-btn {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  
+/* Questions feedback box display*/
+  main #numbers-box {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+/* Questions feedback box display*/
+  main #numbers-box span {
+    background-color: #3d77b9;
+    font-size: 12px;
+    color: white;
+    width: 20px;
+    padding: 4px 0;
+    text-align: center;
+    transition: 0.25s;
+  }
+  
+/* Questions correct feedback box display*/
+  main #numbers-box span.correct {
+    background-color: #6ab93d;
+  }
+  
+/* Questions wrong feedback box display*/
+  main #numbers-box span.wrong {
+    background-color: #b93d47;
+  }
+  
+/* Questions display*/
+  main #question-page #answer-list {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  
+/* Questions display*/
+  main #question-page #answer-list button {
+    margin: 0.1rem;
+  }
+  
+/* Questions display*/
+  main #question-page #feedback {
+    font-weight: 600;
+  }
+  
+/* Initials for High score*/
+  main #get-name #score-display {
+    font-weight: 600;
+  }
+  
+/* Initials for High score*/
+  main #get-name #initials-input {
+    margin-right: 1rem;
+    border: 0px;
+    border-bottom: 1px solid black;
+    padding: 0 0.5rem;
+    text-align: center;
+    width: 5rem;
+  }
+  
+/* Initials for High score*/
+  main #get-name #initials-input:focus {
+    border-bottom: 2px solid #0f92fd;
+    outline: none;
+  }
+  
+/* High score tables*/
+  main #high-score #highscore-list {
+    border: 2px solid #1f4a6d;
+    margin-bottom: 0.5rem;
+    font-family: monospace;
+  }
+  
+/* High score tables*/
+  main #high-score #highscore-list div {
+    padding: 0.2rem 0.5rem;
+  }
+  
+/* Color row for Highscore odd rows*/
+  main #high-score #highscore-list div:nth-child(odd) {
+    background-color: rgba(31, 74, 109, 0.25);
+  }
+  
+/* Color row for Highscore even rows*/
+  main #high-score #highscore-list div:nth-child(even) {
+    background-color: rgba(31, 74, 109, 0.1);
+  }
