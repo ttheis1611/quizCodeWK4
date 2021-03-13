@@ -35,7 +35,7 @@ There was much help to build a working product.
         5. Hours of Google searching and preparing to pull all my hair out.
 
 ## The starting page
-
+![StartPage-wk4](https://user-images.githubusercontent.com/76980137/111052267-25534980-841f-11eb-8590-7b46b45c4230.JPG)
 ## The quiz page
 
 ## The correct/wrong box
