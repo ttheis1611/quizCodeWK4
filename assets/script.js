@@ -103,10 +103,14 @@ function quizStart() {
                 'timeRemaining': remainingTime
             })
             highscores = highscores.sort((a, b) => {
-                if (a.score != b.score) return b.score - a.score;
-                if (a.timeRemaining != b.timeRemaining) return b.timeRemaining - a.timeRemaining;
-                if (a.timestamp != b.timestamp) return a.timestamp - b.timestamp;
-                return 0;
+                if (a.score != b.score) {
+                    return b.score - a.score;
+                } if (a.timeRemaining != b.timeRemaining) {
+                    return b.timeRemaining - a.timeRemaining;
+                } if (a.timestamp != b.timestamp) {
+                    return a.timestamp - b.timestamp;
+                } else
+                    return 0;
             })
             localStorage.setItem('highscores', JSON.stringify(highscores));
             displayHighscorePage();
