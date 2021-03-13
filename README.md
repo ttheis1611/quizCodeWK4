@@ -37,7 +37,7 @@ There was much help to build a working product.
 ## The starting page
 ![StartPage-wk4](https://user-images.githubusercontent.com/76980137/111052267-25534980-841f-11eb-8590-7b46b45c4230.JPG)
 ## The quiz page
-
+![Quiz-wk4](https://user-images.githubusercontent.com/76980137/111052272-2ab09400-841f-11eb-9bfe-b57b50efeffd.JPG)
 ## The correct/wrong box
 
 ## The get name page
