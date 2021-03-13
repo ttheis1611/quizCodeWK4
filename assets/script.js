@@ -203,7 +203,7 @@ function displayNextQuestion() {
             if (answer === correctAnswer) {
                 button.classList.add('correct');
             }
-            button.textContent = (i + 1) + "." + answer;
+            button.textContent = (i + 1) + ". " + answer;
             answersList.appendChild(button);
         }
         nextQuestionIndex++;
