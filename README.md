@@ -21,6 +21,7 @@ THEN I can save my initials and score
 
 There was much help to build a working product. 
     Credit goes to:
+    
         1. Kelly Gowing - She helped with initial layout and javascript.
        
         2. Makai Post - Who had a terrific page with a great answer correct/wrong box (I just had to have it)
