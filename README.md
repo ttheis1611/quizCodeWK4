@@ -41,7 +41,7 @@ There was much help to build a working product.
 ![Quiz-wk4](https://user-images.githubusercontent.com/76980137/111052272-2ab09400-841f-11eb-9bfe-b57b50efeffd.JPG)
 
 ## The get name page
-
+![Done-wk4](https://user-images.githubusercontent.com/76980137/111052275-2e441b00-841f-11eb-9aca-e297ffa0e10d.JPG)
 
 ## The highscore page
 ![highScores-wk4](https://user-images.githubusercontent.com/76980137/111052273-2c7a5780-841f-11eb-9f77-47afcd8f56ed.JPG)
