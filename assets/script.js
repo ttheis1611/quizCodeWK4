@@ -59,7 +59,7 @@ var questions = [
     }
 ]
 
-// score tracking variables
+// time * 8 seconds and score tracking variables
 var startTime = questions.length * 8;
 var timePenalty = 10;
 var remainingTime;
@@ -85,8 +85,11 @@ function quizStart() {
                 questionNumbersBox.children[nextQuestionIndex - 1].classList.add('wrong');
                 remainingTime -= timePenalty;
             }
-            if (remainingTime > 0) displayNextQuestion();
-            else displayGetNamePage();
+            if (remainingTime > 0) {
+                displayNextQuestion();
+            } else {
+                displayGetNamePage();
+            }
         }
     })
     //Collect Highscore initials and put in storage
@@ -95,6 +98,7 @@ function quizStart() {
         var initials = initialsInput.value.toUpperCase();
         if (initials) {
             var highscores = JSON.parse(localStorage.getItem('highscores')) || []
+            // stop the time for score
             timestamp = Date.now();
             highscores.push({
                 'timestamp': timestamp,
@@ -180,14 +184,14 @@ function displayQuestionPage() {
     displayNextQuestion();
 }
 
-// Display random questions
+// Display random questions and answers then correct answer
 function displayNextQuestion() {
     if (nextQuestionIndex < questions.length) {
         var question = randomizedQuestions[nextQuestionIndex].question;
         var answers = randomizedQuestions[nextQuestionIndex].answers;
         var randomizedAnswers = randomizeArray(answers);
         var correctAnswer = answers[randomizedQuestions[nextQuestionIndex].correct];
-        // display questions
+        // display questions and answers
         questionDisplay.textContent = question;
         answersList.innerHTML = "";
         answerFeedback.textContent = "";
@@ -212,10 +216,11 @@ function displayNextQuestion() {
 // End of quiz initials, score and remaining time
 function displayGetNamePage() {
     displayPage('get-name');
-    if (remainingTime < 0)
+    if (remainingTime < 0) {
         remainingTime = 0;
-    timeDisplay.textContent = formatSeconds(remainingTime);
-    scoreDisplay.textContent = score;
+        timeDisplay.textContent = formatSeconds(remainingTime);
+        scoreDisplay.textContent = score;
+    }
 }
 
 // Display for High Scores
@@ -233,6 +238,7 @@ function displayHighscorePage() {
         var initials = highscore.initials.padEnd(3, ' ');
         var playerScore = highscore.score.toString().padStart(3, ' ');
         var timeRemaining = formatSeconds(highscore.timeRemaining);
+        // Display for high score table
         el.textContent = (i) + ". " + initials + "- Score:" + playerScore + " - Time:" + timeRemaining;
         highscoreList.appendChild(el);
     }
