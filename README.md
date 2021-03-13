@@ -22,11 +22,15 @@ THEN I can save my initials and score
 There was much help to build a working product. 
     Credit goes to:
         1. Kelly Gowing - She helped with initial layout and javascript.
+       
         2. Makai Post - Who had a terrific page with a great answer correct/wrong box (I just had to have it)
                         Also had nice randomizing of the questions and answers which took me too many hours to recreate.
                         I have to admit this project is based on what Makai had for arrays, random, time convert and correct box.
+       
         3. Inez Escandon - who helped with some ideas on approach for question, next question hide/unhide.
+       
         4. Web Dev Simplified - https://www.youtube.com/watch?v=riDzcEQbX6k This video was awesome for helping get this going.
+        
         5. Hours of Google searching and preparing to pull all my hair out.
 
 ## The starting page
