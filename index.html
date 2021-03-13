@@ -1,55 +1,66 @@
 <!DOCTYPE html>
-	<html lang="en">
-	<head>
-	    <meta charset="UTF-8">
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    <title>CoDe QuIz</title>
-	
-	    <link rel="stylesheet" href="./assets/restart.css">
-	    <link rel="stylesheet" href="./assets/style.css">
-		<link rel="stylesheet" href="./assets/layout.css">
-	</head>
-	<body>
-	    <header>
-	        <a id="view-highscore" href="#">View Highscores</a>
-	        <span id="time">Time: <span id="display-time">0</span></span>
-	    </header>
-	
-	    <main>
-	        <section id="start-quiz" class="page">
-	            <h1>Coding Quiz Challenge</h1>
-		        <p>Wanna test your skills by taking a timed quiz on coding?</p>
-				<p> Be careful, wrong answers will reduce your time left to complete!</p>
-	            <button id="start-btn">Start Quiz</button>
-	        </section>
-	        
-	        <div id="numbers-box"></div>
-	
-	        <section id="question-page" class="page hide">
-	            <h2 id="question-display"></h2>
-	            	<div id="answer-list"></div>
-	            		<hr>
-	            	<div id="feedback">Correct!</div>
-	        </section>
-	
-	        <section id="get-name" class="page hide">
-	            <h2>All done!</h2>
-	            <p>Your final score is <span id="score-display"></span>.</p>
-		            <br>
-		            <p>Enter initials: 
-	                <input type="text" name="initials" id="initials-input">
-	                <button id="submit-initials-btn">Submit</button>
-	            </p>
-	        </section>
+<html lang="en">
 
-	        <section id="high-score" class="page hide">
-	            <h2>Highscores</h2>
-		            <div id="highscore-list"></div>
-		            <button id="back-button">Go Back</button>
-	            <button id="clear-hs-btn">Clear Highscores</button>
-	        </section>
-	    </main>
-		<script src="./assets/script.js"></script>
+<head>
+	<!-- Head with viewport and stylesheets -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Browser Tab name -->
+	<title>CoDe QuIz</title>
 
-	</body>
-	</html>
+	<link rel="stylesheet" href="./assets/restart.css">
+	<link rel="stylesheet" href="./assets/style.css">
+	<link rel="stylesheet" href="./assets/layout.css">
+</head>
+
+<body>
+	<header>
+		<!-- High score table -->
+		<a id="view-highscore" href="#">View Highscores</a>
+		<span id="time">Time: <span id="display-time">0</span></span>
+	</header>
+
+	<main>
+		<!-- Start page of quiz -->
+		<section id="start-quiz" class="page">
+			<h1>Coding Quiz Challenge</h1>
+			<p>Wanna test your skills by taking a timed quiz on coding?</p>
+			<p> Be careful, wrong answers will reduce your time left to complete!</p>
+			<button id="start-btn">Start Quiz</button>
+		</section>
+
+		<!-- Answer box to # of questions where green = correct and red = wrong -->
+		<div id="numbers-box"></div>
+
+		<section id="question-page" class="page hide">
+			<h2 id="question-display"></h2>
+			<div id="answer-list"></div>
+			<!--Line across screen -->
+			<hr>
+			<!--Feedback ID div -->
+			<div id="feedback"></div>
+		</section>
+		<!--Complete quiz, total score, add initials and log highscore -->
+		<section id="get-name" class="page hide">
+			<h2>All done!</h2>
+			<p>Your final score is <span id="score-display"></span>.</p>
+			<br>
+			<p>Enter initials:
+				<input type="text" name="initials" id="initials-input">
+				<button id="submit-initials-btn">Submit</button>
+			</p>
+		</section>
+		<!--Display for highscore table -->
+		<section id="high-score" class="page hide">
+			<h2>Highscores</h2>
+			<div id="highscore-list"></div>
+			<button id="back-button">Go Back</button>
+			<button id="clear-hs-btn">Clear Highscores</button>
+		</section>
+	</main>
+	<!--Javascript link -->
+	<script src="./assets/script.js"></script>
+
+</body>
+
+</html>

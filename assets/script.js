@@ -14,7 +14,7 @@ var highscoreList = document.getElementById('highscore-list');
 var startingPage = document.getElementById('back-button');
 var clearHighscores = document.getElementById('clear-hs-btn');
 
-// Questions Array
+// Questions Array using question, answer array and correct key for answer
 var questions = [
     {
         'question': 'Debugging tool used during development for printing content to display is?',
@@ -136,7 +136,7 @@ function quizStart() {
 }
 
 // Display or hide each page for quiz
- var id = 0;
+var id = 0;
 function displayPage(id) {
     main.querySelectorAll('.page').forEach(page => {
         if (page.id === id) {
@@ -229,12 +229,13 @@ function displayHighscorePage() {
         var initials = highscore.initials.padEnd(3, ' ');
         var playerScore = highscore.score.toString().padStart(3, ' ');
         var timeRemaining = formatSeconds(highscore.timeRemaining);
-        el.textContent = (i) +". " + initials + "- Score:" + playerScore + " - Time:" + timeRemaining;
+        el.textContent = (i) + ". " + initials + "- Score:" + playerScore + " - Time:" + timeRemaining;
         highscoreList.appendChild(el);
-    } 
+    }
 }
 // Shuffle questions and answers to random display
 function randomizeArray(questions) {
+    // recreate array questions, answers and answer key
     shuffle = [...questions];
     output = [];
     while (shuffle.length > 0) {
@@ -260,7 +261,7 @@ function startTimer() {
     }, 1000);
 }
 
-// Time display in mm:ss
+// Time display in mm:ss using padStart and toString
 function formatSeconds(seconds) {
     let m = Math.floor(seconds / 60).toString().padStart(2, ' ');
     let s = (seconds % 60).toString().padStart(2, '0');
